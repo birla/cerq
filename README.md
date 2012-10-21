@@ -1,7 +1,7 @@
 CERQ
 ====
 
-> CERQ (= **C**lient **ER**ror **Q**ueue) is a Javascript for logging client-side Javascript errors.
+CERQ (= **C**lient **ER**ror **Q**ueue) is a Javascript for logging client-side Javascript errors.
 
 Distributed under BSD-3 Clause license.
 
@@ -34,12 +34,16 @@ The script is available in two versions:
 Put the following code in the `<head>` tag
 
 	<script type="text/javascript">
-	var _cerq=[];(function(a,c){a.onerror=function(){_cerq.push(arguments)};var b=function(){var a=c.createElement("script");a.type="text/javascript";a.async=!0;a.src="/js/cerq-ga-min.js";var b=c.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)};a.addEventListener&&(a.addEventListener("load",b,!1),1)||a.attachEvent&&a.attachEvent("onload",b)||b()})(window,document);
+	var _cerq=[];(function(a,c){a.onerror=function(){_cerq.push(arguments)};
+	var b=function(){var a=c.createElement("script");a.type="text/javascript";a.async=!0;
+	a.src="/js/cerq-ga-min.js";var b=c.getElementsByTagName("script")[0];
+	b.parentNode.insertBefore(a,b)};a.addEventListener&&(a.addEventListener("load",b,!1),1)
+	||a.attachEvent&&a.attachEvent("onload",b)||b()})(window,document);
 	</script>
 
 Note: Be sure to change the script path in `a.src` as required.
 
-### Using version 1 (cerq-ga-min.js minified via [Closure][gc])
+### Using version 1 ([cerq-ga-min.js][cgm] minified via [Closure][gc])
 
 Format of Event:  
 
@@ -65,11 +69,11 @@ Error data explained:
 Note: Page URL, Approximate Time, Browser Name & Browser Version are already
 available in Google Analytics so they have been excluded.
 
-If you are OK with this, then go ahead and use **cerq-ga-min.js** otherwise you can make changes in
-**cerq-ga.js**.
+If you are OK with this, then go ahead and use [cerq-ga-min.js][cgm] otherwise you can make changes in
+[cerq-ga.js][cg].
 
 
-### Using version 2 (cerq.js) or version 1 (cerq-ga.js)
+### Using version 2 ([cerq.js][c]) or version 1 ([cerq-ga.js][cg])
 
 For version 2, you need to implement the `sendError` function to transport the error as per your
 needs.
@@ -115,3 +119,6 @@ License
 	SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 [gc]: http://closure-compiler.appspot.com/home "Google's Closure Complier"
+[cgm]: https://raw.github.com/birla/cerq/master/src/cerq-ga-min.js
+[cg]: https://raw.github.com/birla/cerq/master/src/cerq-ga.js
+[c]: https://raw.github.com/birla/cerq/master/src/cerq.js
