@@ -1,0 +1,20 @@
+<script type="text/javascript">
+//define an array for list of errors
+var _cerq = [];
+(function(w,d){
+	//put the error handler in place
+	w.onerror=function(){
+		_cerq.push(arguments);
+	};
+	//load script dynamically on load
+	var load = function(){
+		var es = d.createElement('script');
+		es.type = 'text/javascript';
+		es.async = true;
+		es.src = '/public/assets/cerq.js';
+		var s = d.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(es, s);
+	};
+	(w.addEventListener && (w.addEventListener('load',load,false),1)) || (w.attachEvent && w.attachEvent('onload',load)) || load();
+})(window,document);
+</script>
