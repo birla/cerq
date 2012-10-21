@@ -1,7 +1,7 @@
 CERQ
 ====
 
-CERQ (= **C**lient **ER**ror **Q**ueue) is a Javascript for logging client-side Javascript errors.
+### CERQ (= **C**lient **ER**ror **Q**ueue) is a Javascript for logging client-side Javascript errors.
 
 Distributed under BSD-3 Clause license.
 
@@ -23,10 +23,10 @@ Log Javascript error information such as:
 
 The script is available in two versions:
 
-1. Send error data to Google Analytics as Events **cerq-ga.js**
+1. Send error data to Google Analytics as Events [cerq-ga.js][cg], [cerq-ga-min.js][cgm]
 	* Works out of the box!
 	* Delay in GA showing the events data.
-2. Send error data to Javascript Debug Console (via console.log) **cerq.js**
+2. Send error data to Javascript Debug Console (via console.log) [cerq.js][c]
 	* You will have to implement the `sendError` function.
 
 ### How to use?
