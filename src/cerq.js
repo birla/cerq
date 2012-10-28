@@ -1,5 +1,5 @@
 // ==ClosureCompiler==
-// @output_file_name cerq-ga-min.js
+// @output_file_name cerq-min.js
 // @compilation_level ADVANCED_OPTIMIZATIONS
 // ==/ClosureCompiler==
 
@@ -125,14 +125,14 @@
 		if(!e || e.length != 3) return !0;
 		//create the error data object
 		var p = {
-			"m":e[0], //error message
-			"f":e[1], //error file
-			"l":e[2],	//error line
-			"p":w.location.href, //page url
-			"b":bInfo[0], //browser name
-			"bv":bInfo[1], //browser ver
-			"t":Math.round((new Date()).getTime() / 1000), //unix timestamp,
-			"d":domState //dom load state i.e. before or after
+			"m":e[0],										//error message
+			"f":e[1],										//error file
+			"l":e[2],										//error line
+			"p":w.location.href,							//page url
+			"b":bInfo[0],									//browser name
+			"bv":bInfo[1],									//browser ver
+			"t":Math.round((new Date()).getTime() / 1000),	//unix timestamp,
+			"d":domState 									//dom load state i.e. before or after
 		};
 		//transport the error
 		sendError(p);

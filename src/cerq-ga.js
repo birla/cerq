@@ -1,6 +1,6 @@
 // ==ClosureCompiler==
 // @output_file_name cerq-ga-min.js
-// @compilation_level ADVANCED_OPTIMIZATIONS$
+// @compilation_level ADVANCED_OPTIMIZATIONS
 // ==/ClosureCompiler==
 
 /**
